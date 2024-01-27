@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  webapi.nginx:
+    image: ${DOCKER_REGISTRY-}webapinginx
+    build:
+      context: .
+      dockerfile: WebApi.Nginx/Dockerfile
+    expose: 
+      - "5000"
+  nginx:
+    image: nginx
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - webapi.nginx
+      

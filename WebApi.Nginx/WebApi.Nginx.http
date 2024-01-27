@@ -1,0 +1,6 @@
+@WebApi.Nginx_HostAddress = http://localhost:5274
+
+GET {{WebApi.Nginx_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
