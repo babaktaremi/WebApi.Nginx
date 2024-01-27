@@ -6,7 +6,7 @@
 docker-compose up -d
 ```
 
-Web API URL is accessable via the following address ```http:localhost:4000```
+Web API URL is accessable via the following address ```http://localhost:4000```
 
 If you want to horizontally scale the web api , run the following command:
 
